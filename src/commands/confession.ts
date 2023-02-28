@@ -12,13 +12,15 @@ export default function confess(message: Message, args: string[], client: Client
         if (!channel) return;
         if (channel.type !== ChannelType.GuildText) return;
         
-        channel.send(args.join(' '));
+        if (args.length > 0) {
+            channel.send(args.join(' '));
+        }
 
         if (message.attachments.size > 0) {
-            let images_message = '';
+            let images_message = '**Confesser sent the following:**\n';
             message.attachments.forEach((attachment) => {
                 if (attachment.contentType?.startsWith('image/')) {
-                    images_message += attachment.url;
+                    images_message += attachment.url + '\n';
                 }
             });
             channel.send(images_message);

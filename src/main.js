@@ -27,7 +27,7 @@ var client = new discord_js_1.Client({
         discord_js_1.Partials.Message
     ]
 });
-var token = process.env.DISCORD_BOT_TOKEN;
+var token = 'MTA3Nzk4NjA0MDc3OTkwMzAwNg.GqbLEq.CLwwB56YONlfkh31CabifCV8nDI7hpz53tA_vA'; // process.env.DISCORD_BOT_TOKEN;
 client.on('ready', function () {
     console.log("Bot is ready.");
 });
