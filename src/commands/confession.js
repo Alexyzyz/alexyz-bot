@@ -19,7 +19,6 @@ function confess(message, args, client) {
             var images_message_1 = '**Confesser sent the following:**\n';
             message.attachments.forEach(function (attachment) {
                 var _a;
-                console.log(attachment);
                 if ((_a = attachment.contentType) === null || _a === void 0 ? void 0 : _a.startsWith('image/')) {
                     images_message_1 += attachment.url + '\n';
                 }
