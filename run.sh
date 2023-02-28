@@ -1,3 +1,3 @@
 #!/bin/bash
-tsc src/index.ts
-node src/index.js
+tsc src/main.ts
+node src/main.js
